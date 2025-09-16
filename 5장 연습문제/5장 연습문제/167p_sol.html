@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12번 문제풀이</title>
+</head>
+<body>
+    <h1>프런트엔드 개발자 지원서</h1>
+    <p>HTML, CSS, 자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다.</p>
+    <hr>
+    <form>
+        <fieldset>
+            <legend>개인정보</legend>
+            <dl>
+                <dd>
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="name" placeholder="공백 없이 입력하세요.">
+                </dd>
+                <dd>
+                    <label for="phone">연락처</label>
+                    <input type="tel" id="phone" name="phone">
+                </dd>
+            </dl>
+        </fieldset>
+        <fieldset>
+            <legend>지원분야</legend>
+            <dl>
+                <dd>
+                    <input type="radio" name="option" id="web1"><label for="web1">웹 퍼블리싱</label>
+                </dd>
+                <dd>
+                    <input type="radio" name="option" id="web2"><label for="web2">웹 애플리케이션 개발</label>
+                </dd>
+                <dd>
+                    <input type="radio" name="option" id="web3"><label for="web3">개발 환경 개선</label>
+                </dd>
+            </dl>
+        </fieldset>
+        <dl>
+            <dd>
+                <label for="memo">지원동기</label>
+            </dd>
+            <dd>
+                 <textarea name="memo" id="memo" placeholder="본사 지원 동기를 간략히 써 주세요." cols="60" rows="5"></textarea>
+            </dd>
+        </dl>
+        <input type="submit" value="접수하기">
+        <input type="reset" value="다시 쓰기">
+    </form>
+</body>
+</html>
