@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가위바위보 게임</title>
+  <link rel="stylesheet" href="css/project.css">
+</head>
+<body>
+  <h1>무승부 없는 가위바위보</h1>
+
+  <button onclick="play('가위')">가위</button>
+  <button onclick="play('바위')">바위</button>
+  <button onclick="play('보')">보</button>
+
+  <div id="result"></div>
+
+  <script>
+    function play(userChoice){
+      let choices = ['가위', '바위', '보'];
+
+      let filtered = choices.filter(choice => choice !== userChoice);
+
+      let computerChoice = filtered[Math.floor(Math.random()*2)];
+
+      let result = '';
+
+      if (
+        (userChoice === '가위' && computerChoice === '보') ||
+        (userChoice === '바위' && computerChoice === '가위') ||
+        (userChoice === '보' && computerChoice === '바위')
+      ) {
+        result = '당신 승리!';
+      } else {
+        result = '컴퓨터 승리...';
+      }
+
+      document.getElementById('result').innerHTML =
+        `당신: ${userChoice} <br> 컴퓨터: ${computerChoice} <br><br> <strong>${result}</strong>`;
+    }
+  </script>
+</body>
+</html>
